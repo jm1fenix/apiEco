@@ -1,34 +1,30 @@
 
 ###
 
-GET http://localhost:3333/apiEco
+GET http://localhost:3333/parques
 
 ###
 
-GET http://localhost:3333/apiEco/aaa
-
-###
-
-POST http://localhost:3333/apiEco
+POST http://localhost:3333/parques
 Content-Type: application/json
 
 {
-    "name": "ORELHA",
-    "password": "12345",
-    "profile": "COMUM"
+    "nome": "Parque do Tio Zé",
+    "local": "Av. É os Guri",
+    "descricao": "Muito verde e calmo"
 }
 
 ###
 
-PUT http://localhost:3333/users/999af5d0-3777-4e02-834d-9b582bc8de68
+PUT http://localhost:3333/parques/207ba239-dea3-4c43-8bd1-a4d078e3ce5a
 Content-Type: application/json
 
 {
-    "name": "ORELHA",
-    "password": "123",
-    "profile": "ADM"
+    "nome": "Parque do Tio Zé",
+    "local": "Av. É os Guri",
+    "descricao": "Muito verde e calmo"
 }
 
 ###
 
-DELETE http://localhost:3333/apiEco/8cf1e65c-8c4a-4a74-b63b-dcc5ab1e0c12
+DELETE http://localhost:3333/apiEco/id

@@ -10,7 +10,7 @@ const sql = postgres({
 
 async function createDatabase() {
   try {
-    await sql`CREATE DATABASE apiEco;`; 
+    await sql`CREATE DATABASE ParqueFeliz;`; 
 
     console.log('Database created successfully');
   } catch (error) {
@@ -24,7 +24,7 @@ async function createUser() {
   try {
     await sql`CREATE USER local WITH PASSWORD '12345';`;
 
-    await sql`GRANT ALL PRIVILEGES ON DATABASE users TO local;`;
+    await sql`GRANT ALL PRIVILEGES ON DATABASE parqueFeliz TO local;`;
 
     await sql`GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO local;`;
 
@@ -34,7 +34,7 @@ async function createUser() {
 
     console.log('User created and granted privileges successfully');
   } catch (error) {
-    console.error('Error creating user or granting privileges:', error.message);
+    console.error('Error creating parqueFeliz or granting privileges:', error.message);
   } finally {
     await sql.end();
   }

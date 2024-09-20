@@ -1,24 +1,25 @@
 import { sql } from './db.js';
 
-export class DatabaseApiEco {
-    async createPonto(pontoEco) {
-        const id = pontoEco.id();
-        const nome = pontoEco.nome;
-        const local = pontoEco.local;
+export class DatabaseParqueFeliz {
+    async createParque(parqueFeliz) {
+        const id = parque.id();
+        const nome = parque.nome;
+        const local = parque.local;
+        const descricao = parque.descricao;
 
-        await sql`insert into pontoeco (id, nome, local)
-        values (${id}, ${nome}, ${local}`
+        await sql`insert into parque (id, nome, local, descricao)
+        values (${id}, ${nome}, ${local}, ${descricao}`
     }
 
-    async listPontoEco() {
+    async listParque() {
 
     }
   
-    async updatePontoEco(id, pontoEco) {
+    async updateParque(id, parque) {
        
     }
   
-    async deletePontoEco(id) {
+    async deleteParque(id) {
        
     }
 }
