@@ -27,4 +27,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3333/apiEco/207ba239-dea3-4c43-8bd1-a4d078e3ce5a
+DELETE http://localhost:3333/parques/99c17a2e-9d46-420c-9cad-b15183eab2b1
