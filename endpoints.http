@@ -27,4 +27,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3333/apiEco/id
+DELETE http://localhost:3333/apiEco/207ba239-dea3-4c43-8bd1-a4d078e3ce5a
