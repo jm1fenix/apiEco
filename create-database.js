@@ -20,7 +20,7 @@ async function createDatabase() {
   }
 }
 
-async function createUser() {
+async function create() {
   try {
     await sql`CREATE USER local WITH PASSWORD '12345';`;
 

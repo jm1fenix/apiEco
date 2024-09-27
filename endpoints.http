@@ -16,11 +16,11 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:3333/parques/207ba239-dea3-4c43-8bd1-a4d078e3ce5a
+PUT http://localhost:3333/parques/b186cf17-44ee-4e06-8f47-ac4d17cc5208
 Content-Type: application/json
 
 {
-    "nome": "Parque do Tio Zé",
+    "nome": "Parque do Tio José",
     "local": "Av. É os Guri",
     "descricao": "Muito verde e calmo"
 }

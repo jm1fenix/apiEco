@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parques</title>
+</head>
+<body>
+
+    <input type="text" placeholder= "Nome" id="nome">
+    <input type="text" placeholder="Local" id="local">
+    <input type="text" placeholder="Descrição" id="descricao">
+    <button onclick="criarParque()">Criar Parque</button>
+
+    <p id="parques"></p>
+
+    <script>
+        async function pegarParques() {
+            const resposta = await fetch('http://localhost:3333/parques',{
+                method: 'GET'
+            })
+            const parques = await resposta.json();
+            console.log(parques);
+            
+            const elementoP = document.getElementById('parques');
+            elementoP.innerHTML = parques[1].nome;
+            
+        }
+        pegarParques();
+
+        async function criarParque() {
+            const nome = document.getElementById('nome').value;
+            const local = document.getElementById('local').value;
+            const descricao = document.getElementById('descricao').value;
+
+            const novoParque = {
+                "nome": nome,
+                "local": local,
+                "descricao": descricao
+            };
+            const resposta = await fetch('http://localhost:3333/parques', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(novoParque)
+            });
+        }
+</script>
+</body>
+</html>
